@@ -1,0 +1,11 @@
+Toma Andrei 321CB
+
+Mai intai este preluat numarul de fisiere date argument pe baza a argc si ii
+trimit receiverului acest numar. Receiverul verifica daca mesajul a fost
+primit, retine numarul de fisiere si ii trimite ACK-ul senderului pentru a
+trimite alt packet.
+Dupa, pentru fiecare fisier se trimit numele si dimensiunea fisierului care
+sunt primite de catre receiver si dupa se realizeaza citirea din fisier. Se
+transmit maxim MAX_LEN bytes din continutul fisierului cat timp are ce citi
+din fisier. Se citeste intr-un buffer si dupa se copiaza in payload si se
+trimite receiverului cantitatea citita din fisier.
