@@ -1,0 +1,15 @@
+Toma Andrei 321CB
+
+Mai intai trimit de la sender la receiver metadatele fisierului, cum ar fi:
+numele fisierului, dimensiunea fisierului si numarul de cadre pe care trebuie
+sa le citeasca.
+Dupa aceea initializez fereastra glisanta fara a astepta ack de la receiver;
+Senderul trimite WINDOW_SIZE cadre fara a astepta ACK pentru ele. Dupa aceea
+preiau ACK de la primul mesaj trimis si daca a fost primit cum trebuie atunci
+voi pune urmatorul cadru pe fereastra glisanta si il voi trimite la receiver si
+asa mai departe pana cand sunt trimise toate cadrele citie din fisier. In final,
+este primit ACK-ul si pentru ultimele fisiere pentru ca executia progrmamului
+sa ajunga la final.
+De asemenea, pentru fiecare cadru trimis am adaugat o suma de control care este
+verificata de receiver cand acesta primeste un cadru. Suna a fost facuta prin
+operatia XOR pe caracterele din payload.
