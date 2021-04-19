@@ -1,0 +1,5 @@
+Toma Andrei 321CB
+
+Am implementat functia care cauta cea mai buna ruta sortand tabela de rutare dupa masca si am selectat
+primul element din tabela de rutare. In functia care cauta intrarea arp se face o cautare liniara dupa ip. La fiecare pas se verifica TTL, se verifica checksum si dupa se recalculeaza checksum si se trimite
+pachetul mai departe.

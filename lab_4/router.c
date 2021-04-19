@@ -53,6 +53,9 @@ int main(int argc, char *argv[])
 	rtable_size = read_rtable(rtable);
 	parse_arp_table();
 	qsort(rtable, rtable_size, sizeof(struct route_table_entry), cmpfunc);
+	for (int i = 0; i < rtable_size; i++) {
+		printf("%d\n", rtable[i].mask);
+	}
 	/* Students will write code here */
 
 	while (1) {

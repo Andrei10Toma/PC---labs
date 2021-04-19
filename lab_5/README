@@ -1,0 +1,11 @@
+Toma Andrei 321CB
+
+Ping:
+Am populat campurile din ip header si din icmp header. Dupa care trimit
+pachetul si astept raspuns pentru fiecare dintre ele si afisez
+informatiile.
+
+Traceroute:
+Similar cu ping populez campurile din ip header si din icmp header. Dupa
+trimit cate un pachet intai cu ttl 1, dupa care ttl 2, ttl 3 etc. Le trimit
+asa pentru a vedea exact prin cate hopuri trece pachetul pana la destinatie.

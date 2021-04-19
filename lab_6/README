@@ -1,0 +1,5 @@
+Toma Andrei 321CB
+
+Mai intai pornesc socketul si setez portul pe 8000. Dupa din client citesc din
+fisier intr-un buffer si trimit bufferul la server, care asculta tot pe portul
+8000. Serverul primeste buferele de la client si le scrie intr-un fisier.
