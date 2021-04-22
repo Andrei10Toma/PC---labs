@@ -1,0 +1,18 @@
+Toma Andrei 321CB
+
+client.c:
+Pentru a trimite mesaje intre clienti voi folosi o structura mesaj care va
+contine un buffer si socketul destinatie. Se va face o multiplexare intre a citi
+de la stdin si a trimite mesaje la ceilalti clienti prin intermediul serverului.
+
+server.c:
+Serverul va face o multiplexare intre acceptarea de noi conexiuni si trimiterea
+mesajelor unui client catre clientul destinatie. Clienti vor fi retinuti intr-un
+array de inturi care va contine socket descriptorul lor. De fiecare data cand un
+client se conecteaza clientul care se conecteaza va primi un mesaj legat de
+ceilalti clienti conectati pe server. Ceilalti crienti conectati vor fi 
+notificati de conectarea noului client. De asemenea, cand un client se 
+deconecteaza toti clientii conectati vor fi notificati de deconectarea acestuia.
+Cand un client vrea sa trimita mesajul unui alt client serverul va procesa
+mesajul si va trimite mesajul mai departe catre destinatia care se afla in 
+structura mesajului.

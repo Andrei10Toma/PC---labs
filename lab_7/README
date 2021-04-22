@@ -1,0 +1,14 @@
+Toma Andrei 321CB
+
+    client.c:
+    Deschid un nou socket TCP pentru conectarea la server si completez campurile
+serv_addr. De asemenea, se creaza conexiunea catre server. Se citeste intr-un
+buffer si se trimite acesta pe socket.
+
+    server.c:
+    Se deschide un socket TCP pentru receptionarea conexiunilor si completez
+campurile din serv_addr. Mai departe, se asociaza adresa serverului cu socketul
+creat folosind bind. Dupa se asculta pe socket pentru 2 conexiuni si se asteapta
+sa se conecteze 2 clienti. Si dupa aceea se trimite mesajul primului client 
+catre al doilea client, si cel de la doilea client catre primul client. La final
+se inchid toate socketurile.
