@@ -14,8 +14,7 @@ void usage(char *file)
 	exit(0);
 }
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
 	int sockfd, newsockfd, portno;
 	struct sockaddr_in serv_addr, cli_addr;
 	int n, i, ret;
@@ -134,16 +133,6 @@ int main(int argc, char *argv[])
 						FD_CLR(i, &read_fds);
 					} else {
 						printf ("S-a primit de la clientul de pe socketul %d mesajul: %s\n", i, mesaj->buffer);
-						// char recv_msg[] = "Mesaj primit\0";
-						// n = send(i, recv_msg, strlen(recv_msg) + 1, 0);
-						// DIE(n < 0, "send server");
-						// if (FD_ISSET(clients[0], &tmp_fds)) {
-							// n = send(clients[1], mesaj, sizeof(struct msg), 0);
-							// DIE(n < 0, "send client0 to client1");
-						// } else {
-							// n =  send(clients[0], mesaj, sizeof(struct msg), 0);
-							// DIE(n < 0, "send client1 to client0");
-						// }
 						for (j = 0; j < contor_client; j++) {
 							if (FD_ISSET(clients[j], &tmp_fds)) {
 								n = send(mesaj->destination, mesaj, sizeof(struct msg), 0);

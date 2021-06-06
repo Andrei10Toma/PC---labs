@@ -68,8 +68,7 @@ int main(int argc,char**argv)
 		}
 		sendto(sockid, buf, citire, MSG_CONFIRM, &to_station, sizeof(struct sockaddr_in));
 	}
-
-
+	
 	/*Inchidere socket*/
 	close(sockid);
 	
